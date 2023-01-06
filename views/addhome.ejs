@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sale-Add Property</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Odia&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+        .login-btn {
+            visibility: hidden;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .container {
+            max-width: 960px;
+        }
+
+        .home{
+    min-height: 100vh;
+    background:url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home form{
+    margin-top:1rem;
+    background:#fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    border:.1rem solid rgba(0,0,0,.2);
+    width:70rem;
+    padding:2rem;
+}
+
+.home form h3{
+    text-align: center;
+    color:#333;
+    font-size: 3rem;
+}
+
+.home form .buttons-container{
+    display: flex;
+    gap:1.5rem;
+}
+
+.home form .buttons-container .btn{
+    flex:1;
+}
+
+.home form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    margin-top: 1rem;
+}
+
+.home form .inputBox input,
+.home form .inputBox select{
+    flex:1 1 25rem;
+    border:.1rem solid #333;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    font-size: 1.5rem;
+    padding:0.6rem 1rem;
+    text-transform: none;
+}
+
+.home form .btn{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+        .reset {
+            display: inline-block;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            margin: 1%;
+            width: 13%;
+            background-color: black;
+            color: aliceblue;
+            border-radius: 7%;
+        }
+
+        .reset:hover {
+            background-color: aliceblue;
+            color: #000;
+        }
+         #type{
+             padding-right:10%;
+         }
+        .input{
+            margin:2%;
+        }
+        input{
+            padding:10px 30px;
+            margin-left: 2%;    
+        }
+        label{
+            font-family: 'Anek Odia', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .BHK{
+            padding:1% 2%;
+        }
+        .uploadbtn{
+            background-color: #E9D5DA;
+            margin-left:2% ;
+            margin-right: 2%;
+            padding-top:1%;
+            padding-bottom: 1%; 
+        }
+
+        .body{
+            background-image: url('https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+            <body class="body">
+                <div class="body">
+                    <center>
+                    <h3 style="padding: 1%;">Enter Property Details</h3>
+                </center>
+                    <div class=" home"  id="home"> 
+                        <form action="/sale/addhome" method="post" enctype="multipart/form-data">
+                            <div class="inputBox">
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">House owner Name</label>
+                                    <input style="width:90%" class="rounded" name="pictures" type="text" class="form-control-file" id="exampleFormControlFile1" multiple>
+                                  </div>
+                                  <div>
+                                  <label for="number">Mobile number</label>
+                                  <input maxlength="10" class="rounded" type="text" name="pnumber" placeholder="" id="number">
+                                </div>
+                                <div>
+                                    <label for="number">Mail ID</label>
+                                    <input type="text" name="mailid" placeholder="" id="number" required>
+                                  </div>
+                                <select class="rounded" name="ptype" id="type">
+                                    <option value="" disabled hidden selected>Property type</option>
+                                    <option value="flat">flat</option>
+                                    <option value="house">house</option>
+                                    <option value="shop">shop</option>
+                                </select>
+                                <select class="rounded" name="pstatus" id="">
+                                    <option value="" disabled hidden selected>property status</option>
+                                    <option value="furnished">furnished</option>
+                                    <option value="semi-furnished">semi-furnished</option>
+                                    <option value="unfurnished">unfurnished</option>
+                                </select>
+                                      
+                                <select class="rounded" name="pbhk" id="">
+                                    <option value="" disabled hidden selected>BHK</option>
+                                    <option value="1 BHK">1 BHK</option>
+                                    <option value="2 BHK">2 BHK</option>
+                                    <option value="3 BHK">3 BHK</option>
+                                </select>
+                                
+                                <select class="rounded" name="pcity" id="">
+                                    <option value="" disabled hidden selected>City</option>
+                                    <option value="Tiruppur">Tiruppur</option>
+                                    <option value="Coimbatore">Coimbatore</option>
+                                    <option value="salem">salem</option>
+                                </select>
+                                <input class="rounded" type="text" name="plandmark" placeholder="Landmark" id="">
+                                <input class="rounded" type="number" name="pprice" placeholder="Price" id="">
+                                
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Upload images</label>
+                                    <input style="width:90%" class="rounded" name="pictures" type="file" class="form-control-file" id="exampleFormControlFile1" multiple>
+                                  </div>
+                                <input type="text" name="paddress" placeholder="Address" id="">
+                            </div>
+                        <div class="input">
+                            <button type="submit" class="reset">Submit</button>
+                            <button type="reset" class="reset">Reset</button>
+                        </div>
+                        </form>
+                        </main>
+
+                        
+                    </div>
+                    <footer class="my-5 pt-5 text-muted text-center text-small">
+                        <p class="mb-1">&copy; 2017–2023 FindIt</p>
+                    </footer>
+
+
+                    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                        crossorigin="anonymous">
+
+                            (function () {
+                                'use strict'
+
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.querySelectorAll('.needs-validation')
+
+                                // Loop over them and prevent submission
+                                Array.prototype.slice.call(forms)
+                                    .forEach(function (form) {
+                                        form.addEventListener('submit', function (event) {
+                                            if (!form.checkValidity()) {
+                                                event.preventDefault()
+                                                event.stopPropagation()
+                                            }
+
+                                            form.classList.add('was-validated')
+                                        }, false)
+                                    })
+                            })()
+
+                        </script>
+                        <script>
+         $(function(){
+            $("input[type = 'submit']").click(function(){
+               var $fileUpload = $("input[type='file']");
+               if (parseInt($fileUpload.get(0).files.length) > 3){
+                  alert("You are only allowed to upload a maximum of 3 files");
+               }
+            });
+         });
+                        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+            </body>
+
+</html>
+
+</body>
+
+</html>
